@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>alantv@project</title>
+<!-- Icon tab browser / favicon -->
+<link rel="icon" type="image/svg+xml" href="https://i.imgur.com/hAiR9N0.png">
+<link rel="alternate icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="favicon-home.png">
+<meta name="theme-color" content="#101020">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+<script src="playlist-list.js" defer></script>
+<script src="script.js" defer></script>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="domain-logo-wrap">
+<img class="domain-logo" src="https://i.imgur.com/oJWJ8R5.png" alt="alantv logo">
+<span class="domain-name"></span>
+</div>
+
+<h1>Welcome <span>alantv@project</span></h1>
+<p>Enjoy The World Comrade</p>
+
+<a id="appBtn" class="btn" href="#">
+Get App
+</a>
+
+<button class="btn" onclick="openPlaylistPopup()">
+Copy playlist
+</button>
+
+<div class="popup-overlay" id="playlistOverlay" onclick="closePlaylistPopup()"></div>
+
+<div class="playlist-popup" id="playlistPopup">
+<div class="popup-head">
+<div>
+<h2>Playlist</h2>
+<small>Pilih playlist lalu copy URL</small>
+</div>
+<button class="popup-close" onclick="closePlaylistPopup()">×</button>
+</div>
+
+<div class="playlist-list" id="playlistList"></div>
+</div>
+
+<button class="btn" onclick="showImage()">
+Nyawits
+</button>
+
+<div class="image-box" id="sawitImage">
+<img src="nyawits.png" alt="Tandan Sawit">
+</div>
+
+</div>
+
+<div id="musicPlayer">
+<div id="disc">♫</div>
+<button id="musicBtn" onclick="toggleMusic()">⏸</button>
+</div>
+
+<audio id="bgMusic" autoplay loop playsinline>
+<source src="https://tjemmajfbnrcbxasemdm.supabase.co/storage/v1/object/public/app_project/nyawitsoungs.mp3" type="audio/mpeg">
+</audio>
+
+<div class="toast" id="toast">
+congrats Comrades!
+</div>
+
+</body>
+</html>
